@@ -51,8 +51,21 @@ permalink: "/"
         border-color: #fff !important;
         text-decoration: none;
     }
+    p > a {
+        clear: both;
+        float:none;
+        display: inline-block;
+        width: auto;
+        border-color: transparent;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    p {
+        margin-top: 1em;
+    }
 </style>
 <h1>colors.fyi</h1>
+<p>This big weird site, is a list of all the colors, that meet WCAG AA criteria for contrast with black and white</p>
 <ul>
     {% for key, colors in sortedColors %}
         <li style="background:#{{colors|first}};">
@@ -60,3 +73,4 @@ permalink: "/"
         </li>
     {% endfor %}
 </ul>
+<p><a href="https://ericmikkelsen.com/">Made by Eric Mikkelsen</a></p>
