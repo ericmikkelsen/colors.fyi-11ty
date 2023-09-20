@@ -39,9 +39,10 @@ permalink: "/{{ pagination.items[0]}}/index.html"
   }
   li[style] {
     color: #000;
-    padding: 2.631578947% 1em;
+    padding: 2.631578947% 0;
     text-align: center;
     width: 10em;
+    max-width: 100%;
     float: left;
     margin: 0;
   }
@@ -90,7 +91,7 @@ permalink: "/{{ pagination.items[0]}}/index.html"
 <a href="#title" class="top">Back to top</a>
 </header>
 
-<ol>
+<ol role="list">
   {% for color in sortedColors[color] %}
     <li style='background:#{{color}}'>
       <span>
