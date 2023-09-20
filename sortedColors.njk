@@ -45,15 +45,16 @@ permalink: "/{{ pagination.items[0]}}/index.html"
     min-width: 10%;
     float: left;
     margin: 0;
+    content-visibility: auto;
+    contain-intrinsic-size: 100% 3.849375em;
   }
   @media (min-width:26.875em){
     li[style] {
       width: 12em;
+      contain-intrinsic-size: 12em 3.849375em;
     }
   }
   li[style] span {
-    content-visibility: auto;
-    contain-intrinsic-size: 10em 3.849375em;
     color: #fff;
   }
   a[style] {
@@ -97,8 +98,8 @@ permalink: "/{{ pagination.items[0]}}/index.html"
 
 <ol role="list">
   {% for color in sortedColors[color] %}
-    <li style='background:#{{color}}'>
-      <span>
+    <li id="{{loop.index}}" style='background:#{{color}}'>
+      <span id='{{color}}'>
         #{{ color }}
       </span>
     </li>
