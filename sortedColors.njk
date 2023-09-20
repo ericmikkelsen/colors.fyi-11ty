@@ -78,7 +78,7 @@ permalink: "/{{ pagination.items[0]}}/index.html"
   .top {
     position: fixed;
     bottom: 0;
-    display: block;
+    display: inline-block;
     text-align: center;
     color: inherit;
     padding: 1em 0;
@@ -92,8 +92,7 @@ permalink: "/{{ pagination.items[0]}}/index.html"
   }
 </style>
 <header>
-<h1 id="title"><a href="/" class='home'>colors.fyi</a> <span>/ {{color}}</span></h1>
-<a href="#title" class="top">Back to top</a>
+  <h1 id="title"><a href="/" class='home'>colors.fyi</a> <span>/ {{color}}</span></h1>
 </header>
 
 <ol role="list">
@@ -105,3 +104,4 @@ permalink: "/{{ pagination.items[0]}}/index.html"
     </li>
   {% endfor -%}
 </ol>
+<a href="#title" class="top">Back to top</a>
