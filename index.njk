@@ -4,32 +4,12 @@ layout: "base.njk"
 permalink: "/" 
 ---
 <style>
-    h1 {
-        font-size: 1.1875em;
-        margin: 0;
-        padding: 5.263157894% 0;
-    }
     html {
-        font-family: sans-serif;
-        font-size: 1em;
         margin: 0;
-        padding: 0 5% 4em;
         border-top: .125em solid #fff;
-        -moz-text-size-adjust: none;
-        -webkit-text-size-adjust: none;
-        text-size-adjust: none;
     }
     * {
         box-sizing: border-box;
-    }
-    body {
-        background: #000;
-        color: #fff;
-        margin: 0 auto;
-        padding: 0;
-    }
-    h1 {
-        font-size: 1.1875em;
     }
     ul {
         list-style: none;
@@ -43,11 +23,12 @@ permalink: "/"
     }
     a {
         display: block;
-        color: #fff;
-        padding: 1.25em 2.631578947%;
+        color: #000;
+        padding: 1.5em;
         border-width: .125em;
         border-style: solid;
         border-color: transparent;
+        color: #fff;
         outline:none;
         width: 100%;
     }
@@ -75,13 +56,24 @@ permalink: "/"
 <header>
     <h1>colors.fyi</h1>
 </header>
-<ul role="list">
-    {% for key, colors in sortedColors %}
-        <li style="background-color:#{{colors|first}};--c1:#{{colors|first}};--c2:#{{colors|last}};">
-            <a href="/{{key}}/">{{key}}</a>
-        </li>
-    {% endfor %}
-</ul>
-
-<p>This big weird site, is a list of all the colors, that meet WCAG AA criteria for contrast with black and white</p>
-<p><a href="https://ericmikkelsen.com/">Made by Eric Mikkelsen</a></p>
+<main>
+    <ul role="list">
+        {% for key, colors in sortedColors %}
+            <li style="background-color:#{{colors|first}};--c1:#{{colors|first}};--c2:#{{colors|last}};">
+                <a href="/{{key}}/">
+                    <u>
+                        {{key}}
+                    </u>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</main>
+<footer>
+    <p>This big weird site, is a list of all the colors, that meet WCAG AA criteria for contrast with black and white</p>
+    <p><a href="https://ericmikkelsen.com/">
+        <u>
+        Made by Eric Mikkelsen
+        </u>
+        </a></p>
+</footer>
