@@ -87,7 +87,7 @@ permalink: "/{{ pagination.items[0]}}/index.html"
 </header>
 <main>
   <ol role="list">
-    {% for color in sortedColors[color] %}<li style='background:#{{color}}'><span>#{{ color }}</span></li>{% endfor -%}
+    {% for color in sortedColors[color] %}<li style='background:#{{color}}' id="{{loop.index}}"><span id="{{color}}">#{{ color }}</span></li>{% endfor %}
   </ol>
 </main>
 <footer>
